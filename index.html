@@ -9,6 +9,66 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Specific Hero Layout Styles */
+        .hero-banner-custom {
+            position: relative;
+            padding: 160px 0 120px 0;
+            background: linear-gradient(to right, rgba(10, 25, 47, 0.98) 0%, rgba(10, 25, 47, 0.85) 45%, rgba(10, 25, 47, 0.3) 100%), url('hero-marketing_2.jpg') center/cover no-repeat;
+            overflow: hidden;
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .hero-collage {
+            display: flex;
+            gap: 15px;
+            height: 440px;
+        }
+        
+        .hero-collage .main-img {
+            flex: 1;
+            width: 50%;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border: 2px solid rgba(255,255,255,0.05);
+        }
+        
+        .hero-collage .stack-col {
+            flex: 1;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .hero-collage .stack-col img {
+            flex: 1;
+            height: calc(50% - 7.5px);
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border: 2px solid rgba(255,255,255,0.05);
+        }
+
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .hero-banner-custom {
+                background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.95)), url('hero-marketing_2.jpg') center/cover no-repeat;
+                padding: 120px 0 80px 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="preloader"><div class="spinner"></div></div>
@@ -35,32 +95,36 @@
         </div>
     </header>
 
-    <section class="hero" style="position: relative; overflow: hidden; padding: 140px 0 100px 0;">
+    <section class="hero-banner-custom">
         <div class="container reveal" style="position: relative; z-index: 2;">
-            <div class="hero-badge" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.1); padding: 8px 16px; border-radius: 50px; color: var(--white); font-weight: 600; font-size: 0.85rem; margin-bottom: 25px; letter-spacing: 1px; text-transform: uppercase;">
-                Marketing That Works In The Real World[cite: 17]
-            </div>
-            <h1 style="font-size: 4rem; line-height: 1.1;">Customized Marketing <br><span style="color: #38bdf8;">That Drives Real Market Expansion.</span>[cite: 17]</h1>
-            <p style="font-size: 1.1rem; color: #cbd5e1; max-width: 700px; margin-bottom: 40px; line-height: 1.7;">
-                We help businesses to build awareness about their products and services, generate quality leads, build strong brand presence, and expand into new markets—without unnecessary complexity.[cite: 17]
-            </p>
-            <div class="cta-group">
-                <a href="#lead-form" class="btn-primary" style="padding: 16px 32px; font-size: 1.05rem;">Get Your Free Marketing Plan</a>[cite: 17]
-                <a href="contact.html" class="btn-outline" style="padding: 16px 32px; font-size: 1.05rem;">Talk to Our Team</a>[cite: 17]
-            </div>
-            
-            <div style="margin-top: 60px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px;">
-                <div style="display: flex; align-items: center; gap: 8px; color: #94a3b8; font-size: 0.9rem;">
-                    <i class="fa-solid fa-circle-check" style="color: #38bdf8;"></i> Tailor-Made Marketing Strategies[cite: 17]
+            <div class="hero-grid">
+                <!-- Left Content -->
+                <div>
+                    <div style="display: inline-flex; align-items: center; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.3); padding: 8px 18px; border-radius: 50px; color: #cbd5e1; font-weight: 600; font-size: 0.75rem; margin-bottom: 25px; letter-spacing: 1.5px; text-transform: uppercase;">
+                        Marketing That Works In The Real World
+                    </div>
+                    <h1 style="font-size: 3.8rem; line-height: 1.15; color: var(--white); margin-bottom: 20px;">
+                        Customized Marketing <br>That Drives Real <br><span style="color: #38bdf8;">Quality Leads.</span>
+                    </h1>
+                    <p style="font-size: 1.1rem; color: #94a3b8; max-width: 600px; margin-bottom: 40px; line-height: 1.7;">
+                        We help businesses to build awareness about their products and services, generate quality leads, build strong brand presence, and expand into new markets—without unnecessary complexity.
+                    </p>
+                    <div class="cta-group">
+                        <a href="#lead-form" class="btn-primary" style="padding: 16px 32px; font-size: 1.05rem; background: linear-gradient(135deg, #0066cc, #38bdf8); border: none;">Get Your Free Marketing Plan</a>
+                        <a href="contact.html" class="btn-outline" style="padding: 16px 32px; font-size: 1.05rem;">Talk to Our Team</a>
+                    </div>
                 </div>
-                <div style="display: flex; align-items: center; gap: 8px; color: #94a3b8; font-size: 0.9rem;">
-                    <i class="fa-solid fa-circle-check" style="color: #38bdf8;"></i> Cost-Optimized Execution[cite: 17]
-                </div>
-                <div style="display: flex; align-items: center; gap: 8px; color: #94a3b8; font-size: 0.9rem;">
-                    <i class="fa-solid fa-circle-check" style="color: #38bdf8;"></i> Practical, Result-Oriented Approach[cite: 17]
-                </div>
-                <div style="display: flex; align-items: center; gap: 8px; color: #94a3b8; font-size: 0.9rem;">
-                    <i class="fa-solid fa-circle-check" style="color: #38bdf8;"></i> Serving Businesses Across Industries[cite: 17]
+                
+                <!-- Right Image Collage -->
+                <div class="hero-collage">
+                    <!-- Main Left Image -->
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Business Model" class="main-img">
+                    
+                    <!-- Stacked Right Images -->
+                    <div class="stack-col">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Digital Marketing Strategy">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Global Handshake">
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,27 +135,27 @@
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
                 <div>
                     <div style="color: var(--primary-blue); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
-                        <i class="fa-solid fa-diamond"></i> About Us[cite: 16]
+                        <i class="fa-solid fa-diamond"></i> About Us
                     </div>
-                    <h2 style="font-size: 2.8rem; line-height: 1.2; margin-bottom: 25px;">No Jargons. No Big Presentations. <br>Just Real Results.[cite: 16]</h2>
+                    <h2 style="font-size: 2.8rem; line-height: 1.2; margin-bottom: 25px;">No Jargons. No Big Presentations. <br>Just Real Results.</h2>
                     <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 20px;">
-                        At Schramm AdLabs, we believe marketing should be simple, practical, and effective.[cite: 16] We don't believe in one-size-fits-all strategies.[cite: 16] Every business is different, and so is our approach.[cite: 16]
+                        At Schramm AdLabs, we believe marketing should be simple, practical, and effective. We don't believe in one-size-fits-all strategies. Every business is different, and so is our approach.
                     </p>
                     <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 30px;">
-                        We work as your <strong>marketing partner</strong>, understanding your business deeply and delivering solutions that actually work in real-world conditions.[cite: 16]
+                        We work as your <strong>marketing partner</strong>, understanding your business deeply and delivering solutions that actually work in real-world conditions.
                     </p>
                     <ul style="display: flex; flex-direction: column; gap: 12px;">
                         <li style="display: flex; align-items: flex-start; gap: 10px; color: var(--text-dark); font-weight: 500;">
-                            <i class="fa-solid fa-circle-check" style="color: var(--primary-blue); margin-top: 4px;"></i> Customized marketing plans for your business needs[cite: 16]
+                            <i class="fa-solid fa-circle-check" style="color: var(--primary-blue); margin-top: 4px;"></i> Customized marketing plans for your business needs
                         </li>
                         <li style="display: flex; align-items: flex-start; gap: 10px; color: var(--text-dark); font-weight: 500;">
-                            <i class="fa-solid fa-circle-check" style="color: var(--primary-blue); margin-top: 4px;"></i> Cost-effective solutions without cutting corners[cite: 16]
+                            <i class="fa-solid fa-circle-check" style="color: var(--primary-blue); margin-top: 4px;"></i> Cost-effective solutions without cutting corners
                         </li>
                         <li style="display: flex; align-items: flex-start; gap: 10px; color: var(--text-dark); font-weight: 500;">
-                            <i class="fa-solid fa-circle-check" style="color: var(--primary-blue); margin-top: 4px;"></i> Practical strategies aligned with your market reality[cite: 16]
+                            <i class="fa-solid fa-circle-check" style="color: var(--primary-blue); margin-top: 4px;"></i> Practical strategies aligned with your market reality
                         </li>
                         <li style="display: flex; align-items: flex-start; gap: 10px; color: var(--text-dark); font-weight: 500;">
-                            <i class="fa-solid fa-circle-check" style="color: var(--primary-blue); margin-top: 4px;"></i> Support for both branding and business expansion[cite: 16]
+                            <i class="fa-solid fa-circle-check" style="color: var(--primary-blue); margin-top: 4px;"></i> Support for both branding and business expansion
                         </li>
                     </ul>
                 </div>
@@ -106,14 +170,14 @@
     <section class="content-section" style="background-color: var(--light-bg); text-align: center;">
         <div class="container reveal">
             <div style="color: var(--primary-blue); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 15px; display: inline-flex; align-items: center; gap: 8px;">
-                <i class="fa-solid fa-diamond"></i> What Makes Us Different[cite: 15]
+                <i class="fa-solid fa-diamond"></i> What Makes Us Different
             </div>
-            <h2 style="font-size: 2.8rem; margin-bottom: 20px;">More Than Just a Marketing Agency[cite: 15]</h2>
+            <h2 style="font-size: 2.8rem; margin-bottom: 20px;">More Than Just a Marketing Agency</h2>
             <p style="color: var(--text-light); font-size: 1.15rem; max-width: 800px; margin: 0 auto 15px auto;">
-                We combine marketing, business development, and industry understanding to help you not just promote—but grow.[cite: 15]
+                We combine marketing, business development, and industry understanding to help you not just promote—but grow.
             </p>
             <p style="color: var(--text-light); font-size: 1.05rem; max-width: 800px; margin: 0 auto;">
-                Unlike typical agencies, we go beyond campaigns and focus on real business outcomes.[cite: 15]
+                Unlike typical agencies, we go beyond campaigns and focus on real business outcomes.
             </p>
         </div>
     </section>
@@ -122,18 +186,18 @@
         <div class="container">
             <div class="section-header reveal">
                 <div style="color: var(--primary-blue); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 15px; display: inline-flex; align-items: center; gap: 8px;">
-                    <i class="fa-solid fa-diamond"></i> What We Do[cite: 15]
+                    <i class="fa-solid fa-diamond"></i> What We Do
                 </div>
-                <h2>Complete Marketing & Growth Solutions[cite: 15]</h2>
+                <h2>Complete Marketing & Growth Solutions</h2>
             </div>
             <div class="grid">
                 <div class="card reveal" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
                     <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Build Your Brand" style="height: 220px; object-fit: cover; width: 100%;">
                     <div style="padding: 30px; text-align: center; flex-grow: 1;">
                         <div style="width: 40px; height: 3px; background: var(--primary-blue); margin: 0 auto 15px auto;"></div>
-                        <h3 style="font-size: 1.4rem; margin-bottom: 15px;">Build Your Brand[cite: 14]</h3>
+                        <h3 style="font-size: 1.4rem; margin-bottom: 15px;">Build Your Brand</h3>
                         <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.7;">
-                            Logo Design • Website Design & Hosting • Packaging • Brochures & Corporate Materials[cite: 14]
+                            Logo Design • Website Design & Hosting • Packaging • Brochures & Corporate Materials
                         </p>
                     </div>
                 </div>
@@ -141,9 +205,9 @@
                     <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Grow Your Visibility" style="height: 220px; object-fit: cover; width: 100%;">
                     <div style="padding: 30px; text-align: center; flex-grow: 1;">
                         <div style="width: 40px; height: 3px; background: var(--primary-blue); margin: 0 auto 15px auto;"></div>
-                        <h3 style="font-size: 1.4rem; margin-bottom: 15px;">Grow Your Visibility[cite: 14]</h3>
+                        <h3 style="font-size: 1.4rem; margin-bottom: 15px;">Grow Your Visibility</h3>
                         <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.7;">
-                            SEO • Social Media Marketing • Content Creation • Blogs & Videos[cite: 14]
+                            SEO • Social Media Marketing • Content Creation • Blogs & Videos
                         </p>
                     </div>
                 </div>
@@ -151,9 +215,9 @@
                     <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Generate Leads & Sales" style="height: 220px; object-fit: cover; width: 100%;">
                     <div style="padding: 30px; text-align: center; flex-grow: 1;">
                         <div style="width: 40px; height: 3px; background: var(--primary-blue); margin: 0 auto 15px auto;"></div>
-                        <h3 style="font-size: 1.4rem; margin-bottom: 15px;">Generate Leads & Sales[cite: 14]</h3>
+                        <h3 style="font-size: 1.4rem; margin-bottom: 15px;">Generate Leads & Sales</h3>
                         <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.7;">
-                            Google Ads • Meta Ads • Campaign Strategy • Performance Marketing[cite: 14]
+                            Google Ads • Meta Ads • Campaign Strategy • Performance Marketing
                         </p>
                     </div>
                 </div>
@@ -165,9 +229,9 @@
         <div class="container">
             <div class="section-header reveal">
                 <div style="color: var(--primary-blue); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 15px; display: inline-flex; align-items: center; gap: 8px;">
-                    <i class="fa-solid fa-diamond"></i> How We Work[cite: 13]
+                    <i class="fa-solid fa-diamond"></i> How We Work
                 </div>
-                <h2 style="font-size: 2.8rem;">Our Simple 3-Step Approach[cite: 13]</h2>
+                <h2 style="font-size: 2.8rem;">Our Simple 3-Step Approach</h2>
             </div>
             <div class="grid">
                 <div class="card reveal" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
@@ -175,10 +239,10 @@
                     <div style="padding: 30px; text-align: center; flex-grow: 1;">
                         <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 15px;">
                             <div style="background: var(--primary-blue); color: var(--white); width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">1</div>
-                            <h3 style="font-size: 1.25rem; margin: 0;">Understand Your Business[cite: 13, 12]</h3>
+                            <h3 style="font-size: 1.25rem; margin: 0;">Understand Your Business</h3>
                         </div>
                         <p style="color: var(--text-light); font-size: 0.95rem;">
-                            We gather your business requirements, goals, and budget to build a clear foundation.[cite: 13, 12]
+                            We gather your business requirements, goals, and budget to build a clear foundation.
                         </p>
                     </div>
                 </div>
@@ -187,10 +251,10 @@
                     <div style="padding: 30px; text-align: center; flex-grow: 1;">
                         <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 15px;">
                             <div style="background: var(--primary-blue); color: var(--white); width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">2</div>
-                            <h3 style="font-size: 1.25rem; margin: 0;">Analyse & Plan[cite: 13, 12]</h3>
+                            <h3 style="font-size: 1.25rem; margin: 0;">Analyse & Plan</h3>
                         </div>
                         <p style="color: var(--text-light); font-size: 0.95rem;">
-                            We design a customized marketing strategy aligned with your objectives and market conditions.[cite: 13, 12]
+                            We design a customized marketing strategy aligned with your objectives and market conditions.
                         </p>
                     </div>
                 </div>
@@ -199,10 +263,10 @@
                     <div style="padding: 30px; text-align: center; flex-grow: 1;">
                         <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 15px;">
                             <div style="background: var(--primary-blue); color: var(--white); width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">3</div>
-                            <h3 style="font-size: 1.25rem; margin: 0;">Execute & Deliver Results[cite: 13, 12]</h3>
+                            <h3 style="font-size: 1.25rem; margin: 0;">Execute & Deliver Results</h3>
                         </div>
                         <p style="color: var(--text-light); font-size: 0.95rem;">
-                            We implement, optimize, and continuously improve campaigns to drive measurable, real-world growth.[cite: 13, 12]
+                            We implement, optimize, and continuously improve campaigns to drive measurable, real-world growth.
                         </p>
                     </div>
                 </div>
@@ -212,29 +276,29 @@
 
     <section id="lead-form" class="content-section" style="background-color: var(--white); text-align: center; padding-bottom: 120px;">
         <div class="container reveal">
-            <h2 style="font-size: 2.4rem; margin-bottom: 20px;">A Marketing Partner That Speaks Your Language[cite: 12]</h2>
+            <h2 style="font-size: 2.4rem; margin-bottom: 20px;">A Marketing Partner That Speaks Your Language</h2>
             <p style="color: var(--text-light); font-size: 1.1rem; max-width: 750px; margin: 0 auto 10px auto;">
-                We don't believe in complicated strategies or unnecessary complexity.[cite: 12]
+                We don't believe in complicated strategies or unnecessary complexity.
             </p>
             <p style="color: var(--text-light); font-size: 1.1rem; max-width: 750px; margin: 0 auto 40px auto;">
-                We focus on delivering value through simple, relevant, and reliable marketing solutions.[cite: 12]
+                We focus on delivering value through simple, relevant, and reliable marketing solutions.
             </p>
             
             <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; margin-bottom: 60px;">
                 <div style="display: flex; align-items: center; gap: 8px; color: var(--text-dark); font-weight: 500; background: var(--light-bg); padding: 10px 20px; border-radius: 50px;">
-                    <i class="fa-solid fa-circle-check" style="color: var(--primary-blue);"></i> Tailored to your business[cite: 12]
+                    <i class="fa-solid fa-circle-check" style="color: var(--primary-blue);"></i> Tailored to your business
                 </div>
                 <div style="display: flex; align-items: center; gap: 8px; color: var(--text-dark); font-weight: 500; background: var(--light-bg); padding: 10px 20px; border-radius: 50px;">
-                    <i class="fa-solid fa-circle-check" style="color: var(--primary-blue);"></i> Designed for current market conditions[cite: 12]
+                    <i class="fa-solid fa-circle-check" style="color: var(--primary-blue);"></i> Designed for current market conditions
                 </div>
                 <div style="display: flex; align-items: center; gap: 8px; color: var(--text-dark); font-weight: 500; background: var(--light-bg); padding: 10px 20px; border-radius: 50px;">
-                    <i class="fa-solid fa-circle-check" style="color: var(--primary-blue);"></i> Focused on achieving real results[cite: 12]
+                    <i class="fa-solid fa-circle-check" style="color: var(--primary-blue);"></i> Focused on achieving real results
                 </div>
             </div>
 
             <div style="max-width: 600px; margin: 0 auto; background: var(--light-bg); padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-                <img src="logo footer.png" alt="Schramm AdLabs" style="height: 50px; margin-bottom: 20px;">
-                <h3 style="font-size: 2rem; margin-bottom: 30px;">Get Free Custom Marketing Plan[cite: 12]</h3>
+                <img src="logo footer.png" alt="Schramm AdLabs" style="height: 50px; margin-bottom: 20px; filter: brightness(0) invert(0);">
+                <h3 style="font-size: 2rem; margin-bottom: 30px;">Get Free Custom Marketing Plan</h3>
                 <a href="contact.html" class="btn-primary" style="padding: 16px 40px; font-size: 1.1rem; width: 100%; justify-content: center;">Start Growing Today</a>
             </div>
         </div>
