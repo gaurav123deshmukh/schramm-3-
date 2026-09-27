@@ -9,82 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
-    <style>
-        header {
-            background: rgba(10, 25, 47, 0.85) !important;
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .nav-wrapper { height: 100px !important; }
-        .logo img { height: 70px !important; }
-        .nav-links a { font-size: 1.15rem !important; color: #ffffff !important; }
-        .nav-links a:hover, .nav-links a.active { color: #38bdf8 !important; }
-        .menu-toggle { color: #ffffff !important; }
-        .btn-quote { font-size: 1.05rem !important; padding: 12px 28px !important; }
-
-        footer {
-            background: rgba(10, 25, 47, 0.9) !important;
-            backdrop-filter: blur(10px);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .hero-banner-custom {
-            position: relative;
-            padding: 180px 0 120px 0;
-            background: linear-gradient(to right, rgba(10, 25, 47, 0.98) 0%, rgba(10, 25, 47, 0.85) 45%, rgba(10, 25, 47, 0.3) 100%), url('hero-marketing.webp') center/cover no-repeat !important;
-            overflow: hidden;
-            margin-top: -100px;
-        }
-        
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 50px;
-            align-items: center;
-        }
-        
-        .hero-collage {
-            display: flex;
-            gap: 15px;
-            height: 440px;
-        }
-        
-        .hero-collage .main-img {
-            flex: 1;
-            width: 50%;
-            object-fit: cover;
-            border-radius: 16px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            border: 2px solid rgba(255,255,255,0.05);
-        }
-        
-        .hero-collage .stack-col {
-            flex: 1;
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        .hero-collage .stack-col img {
-            flex: 1;
-            height: calc(50% - 7.5px);
-            object-fit: cover;
-            border-radius: 16px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            border: 2px solid rgba(255,255,255,0.05);
-        }
-
-        @media (max-width: 992px) {
-            .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-            .hero-banner-custom {
-                background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.95)), url('hero-marketing.webp') center/cover no-repeat !important;
-                padding: 160px 0 80px 0;
-            }
-        }
-    </style>
 </head>
 <body>
     <div id="preloader"><div class="spinner"></div></div>
@@ -113,19 +37,19 @@
         <div class="container reveal" style="position: relative; z-index: 2;">
             <div class="hero-grid">
                 <div>
-                    <div style="display: inline-flex; align-items: center; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.3); padding: 8px 18px; border-radius: 50px; color: #cbd5e1; font-weight: 600; font-size: 0.75rem; margin-bottom: 25px; letter-spacing: 1.5px; text-transform: uppercase;">
+                    <div class="hero-badge">
                         Marketing That Works In The Real World
                     </div>
-                    <h1 style="font-size: 3.8rem; line-height: 1.15; color: var(--white); margin-bottom: 20px;">
+                    <h1 class="hero-title">
                         Customized Marketing <br>That Drives Real <br>
-                        <span class="typed-text" style="color: #38bdf8;"></span><span class="cursor">&nbsp;</span>
+                        <span class="typed-text"></span><span class="cursor">&nbsp;</span>
                     </h1>
-                    <p style="font-size: 1.1rem; color: #94a3b8; max-width: 600px; margin-bottom: 40px; line-height: 1.7;">
+                    <p class="hero-desc">
                         We help businesses to build awareness about their products and services, generate quality leads, build strong brand presence, and expand into new markets—without unnecessary complexity.
                     </p>
                     <div class="cta-group">
-                        <a href="#lead-form" class="btn-primary" style="padding: 16px 32px; font-size: 1.05rem; background: linear-gradient(135deg, #0066cc, #38bdf8); border: none;">Get Your Free Marketing Plan</a>
-                        <a href="contact.html" class="btn-outline" style="padding: 16px 32px; font-size: 1.05rem;">Talk to Our Team</a>
+                        <a href="#lead-form" class="btn-primary">Get Your Free Marketing Plan</a>
+                        <a href="contact.html" class="btn-outline">Talk to Our Team</a>
                     </div>
                 </div>
                 
@@ -140,35 +64,28 @@
         </div>
     </section>
 
-    <!-- Content Sections ... -->
     <section class="content-section" style="background-color: var(--white);">
         <div class="container reveal">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+            <div class="split-grid">
                 <div>
-                    <div style="color: var(--primary-blue); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+                    <div class="section-tag">
                         <i class="fa-solid fa-diamond"></i> About Us
                     </div>
-                    <h2 style="font-size: 2.8rem; line-height: 1.2; margin-bottom: 25px;">No Jargons. No Big Presentations. <br>Just Real Results.</h2>
+                    <h2 class="section-title">No Jargons. No Big Presentations. <br>Just Real Results.</h2>
                     <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 20px;">
                         At Schramm AdLabs, we believe marketing should be simple, practical, and effective. We don't believe in one-size-fits-all strategies. Every business is different, and so is our approach.
                     </p>
                     <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 30px;">
                         We work as your <strong>marketing partner</strong>, understanding your business deeply and delivering solutions that actually work in real-world conditions.
                     </p>
-                    <ul style="display: flex; flex-direction: column; gap: 12px;">
-                        <li style="display: flex; align-items: flex-start; gap: 10px; color: var(--text-dark); font-weight: 500;">
-                            <i class="fa-solid fa-circle-check" style="color: var(--primary-blue); margin-top: 4px;"></i> Customized marketing plans for your business needs
-                        </li>
-                        <li style="display: flex; align-items: flex-start; gap: 10px; color: var(--text-dark); font-weight: 500;">
-                            <i class="fa-solid fa-circle-check" style="color: var(--primary-blue); margin-top: 4px;"></i> Cost-effective solutions without cutting corners
-                        </li>
-                        <li style="display: flex; align-items: flex-start; gap: 10px; color: var(--text-dark); font-weight: 500;">
-                            <i class="fa-solid fa-circle-check" style="color: var(--primary-blue); margin-top: 4px;"></i> Practical strategies aligned with your market reality
-                        </li>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Customized marketing plans for your business needs</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Cost-effective solutions without cutting corners</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Practical strategies aligned with your market reality</li>
                     </ul>
                 </div>
-                <div style="display: flex; flex-direction: column; gap: 20px;">
-                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Team collaborating" style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.08);">
+                <div class="image-stack">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Team collaborating">
                 </div>
             </div>
         </div>
@@ -176,10 +93,10 @@
 
     <section class="content-section" style="background-color: var(--light-bg); text-align: center;">
         <div class="container reveal">
-            <div style="color: var(--primary-blue); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 15px; display: inline-flex; align-items: center; gap: 8px;">
+            <div class="section-tag center">
                 <i class="fa-solid fa-diamond"></i> What Makes Us Different
             </div>
-            <h2 style="font-size: 2.8rem; margin-bottom: 20px;">More Than Just a Marketing Agency</h2>
+            <h2 class="section-title">More Than Just a Marketing Agency</h2>
             <p style="color: var(--text-light); font-size: 1.15rem; max-width: 800px; margin: 0 auto 15px auto;">
                 We combine marketing, business development, and industry understanding to help you not just promote—but grow.
             </p>
@@ -189,28 +106,28 @@
     <section class="content-section" style="background-color: var(--white);">
         <div class="container">
             <div class="section-header reveal">
-                <div style="color: var(--primary-blue); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 15px; display: inline-flex; align-items: center; gap: 8px;">
+                <div class="section-tag center">
                     <i class="fa-solid fa-diamond"></i> What We Do
                 </div>
-                <h2>Complete Marketing & Growth Solutions</h2>
+                <h2 class="section-title">Complete Marketing & Growth Solutions</h2>
             </div>
             <div class="grid">
                 <div class="card reveal" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Build Your Brand" style="height: 220px; object-fit: cover; width: 100%;">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Build Your Brand" class="card-img">
                     <div style="padding: 30px; text-align: center; flex-grow: 1;">
                         <h3 style="font-size: 1.4rem; margin-bottom: 15px;">Build Your Brand</h3>
                         <p style="color: var(--text-light); font-size: 0.95rem;">Logo Design • Website Design & Hosting</p>
                     </div>
                 </div>
                 <div class="card reveal" style="transition-delay: 0.1s; padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Grow Your Visibility" style="height: 220px; object-fit: cover; width: 100%;">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Grow Your Visibility" class="card-img">
                     <div style="padding: 30px; text-align: center; flex-grow: 1;">
                         <h3 style="font-size: 1.4rem; margin-bottom: 15px;">Grow Your Visibility</h3>
                         <p style="color: var(--text-light); font-size: 0.95rem;">SEO • Social Media Marketing • Content</p>
                     </div>
                 </div>
                 <div class="card reveal" style="transition-delay: 0.2s; padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Generate Leads & Sales" style="height: 220px; object-fit: cover; width: 100%;">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Generate Leads & Sales" class="card-img">
                     <div style="padding: 30px; text-align: center; flex-grow: 1;">
                         <h3 style="font-size: 1.4rem; margin-bottom: 15px;">Generate Leads & Sales</h3>
                         <p style="color: var(--text-light); font-size: 0.95rem;">Google Ads • Meta Ads • Campaigns</p>
@@ -225,27 +142,27 @@
             <div class="footer-grid">
                 <div class="footer-logo">
                     <a href="index.html"><img src="Schramm_AdLabs_transparent.webp" alt="Schramm AdLabs Footer Logo"></a>
-                    <p style="color: #cbd5e1;">Relevant. Reliable. Realistic.<br>A Division of KBJ HR INDIA PRIVATE LIMITED.</p>
+                    <p>Relevant. Reliable. Realistic.<br>A Division of KBJ HR INDIA PRIVATE LIMITED.</p>
                 </div>
                 <div class="footer-links">
-                    <h4 style="color: #ffffff;">Navigation</h4>
+                    <h4>Navigation</h4>
                     <ul>
-                        <li><a href="index.html" style="color: #94a3b8;">Home</a></li>
-                        <li><a href="about.html" style="color: #94a3b8;">About Us</a></li>
-                        <li><a href="services.html" style="color: #94a3b8;">Services</a></li>
-                        <li><a href="contact.html" style="color: #94a3b8;">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4 style="color: #ffffff;">Contact Us</h4>
-                    <ul style="color: #94a3b8;">
+                    <h4>Contact Us</h4>
+                    <ul>
                         <li><i class="fa-solid fa-phone" style="margin-right: 8px;"></i> +91 8655695279</li>
                         <li><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> schrammadlabs@kbjindia.com</li>
                         <li><i class="fa-solid fa-location-dot" style="margin-right: 8px;"></i> CBD Belapur, Navi Mumbai</li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom" style="color: #64748b; border-top: 1px solid rgba(255,255,255,0.05);">
+            <div class="footer-bottom">
                 <p>&copy; 2026 Schramm AdLabs. All Rights Reserved.</p>
             </div>
         </div>
