@@ -10,46 +10,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Specific Styles for Detailed Service Cards */
-        .service-card-body {
-            padding: 35px 30px;
-            text-align: left;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .service-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: auto; /* Pushes tags to the bottom evenly */
-            padding-top: 20px;
-        }
-        .service-tags span {
-            background: rgba(0, 102, 204, 0.06);
-            color: var(--primary-blue);
-            padding: 6px 14px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            border: 1px solid rgba(0, 102, 204, 0.15);
-            transition: var(--transition-smooth);
-        }
-        .card:hover .service-tags span {
-            background: var(--primary-blue);
-            color: var(--white);
-            border-color: var(--primary-blue);
-        }
-        .service-card-title {
-            font-size: 1.5rem;
-            margin-bottom: 12px;
-            color: var(--dark-navy);
-        }
-        .service-card-desc {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
+        .service-card-body { padding: 35px 30px; text-align: left; flex-grow: 1; display: flex; flex-direction: column; }
+        .service-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 20px; }
+        .service-tags span { background: rgba(0, 102, 204, 0.06); color: var(--primary-blue); padding: 6px 14px; border-radius: 50px; font-size: 0.8rem; font-weight: 600; border: 1px solid rgba(0, 102, 204, 0.15); transition: var(--transition-smooth); }
+        .card:hover .service-tags span { background: var(--primary-blue); color: var(--white); border-color: var(--primary-blue); }
+        .service-card-title { font-size: 1.5rem; margin-bottom: 12px; color: var(--dark-navy); }
+        .service-card-desc { color: var(--text-light); font-size: 0.95rem; line-height: 1.6; }
     </style>
 </head>
 <body>
@@ -85,7 +51,7 @@
     </header>
 
     <!-- PAGE HEADER -->
-    <section class="page-header" style="padding: 200px 0 100px 0; margin-top: -100px; position: relative; z-index: 2; background: linear-gradient(to right, rgba(10, 25, 47, 0.95), rgba(10, 25, 47, 0.85)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;">
+    <section class="page-header" style="padding: 280px 0 100px 0; margin-top: -100px; position: relative; z-index: 2; background: linear-gradient(to right, rgba(10, 25, 47, 0.95), rgba(10, 25, 47, 0.85)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;">
         <div class="container reveal text-center">
             <div style="display: inline-flex; align-items: center; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.3); padding: 8px 18px; border-radius: 50px; color: var(--primary-cyan); font-weight: 600; font-size: 0.75rem; margin-bottom: 20px; letter-spacing: 1.5px; text-transform: uppercase;">
                 Growth Engine
@@ -100,7 +66,6 @@
         <div class="container">
             <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));">
                 
-                <!-- 1. SEO -->
                 <div class="card reveal card-flush">
                     <div class="card-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Advanced SEO" class="card-img">
@@ -120,7 +85,6 @@
                     </div>
                 </div>
 
-                <!-- 2. Google Ads / Performance Marketing -->
                 <div class="card reveal card-flush" style="transition-delay: 0.1s;">
                     <div class="card-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Performance Marketing" class="card-img">
@@ -139,7 +103,6 @@
                     </div>
                 </div>
 
-                <!-- 3. Web Development -->
                 <div class="card reveal card-flush" style="transition-delay: 0.2s;">
                     <div class="card-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Website Development" class="card-img">
@@ -158,7 +121,6 @@
                     </div>
                 </div>
 
-                <!-- 4. Graphic Design -->
                 <div class="card reveal card-flush" style="transition-delay: 0.3s;">
                     <div class="card-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Graphic Design" class="card-img">
@@ -177,7 +139,6 @@
                     </div>
                 </div>
 
-                <!-- 5. Offline & Creative Marketing (Hoardings) -->
                 <div class="card reveal card-flush" style="transition-delay: 0.4s;">
                     <div class="card-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Offline & Creative Marketing" class="card-img">
@@ -196,7 +157,6 @@
                     </div>
                 </div>
 
-                <!-- 6. Market Expansion -->
                 <div class="card reveal card-flush" style="transition-delay: 0.5s;">
                     <div class="card-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Expand Your Market" class="card-img">
@@ -216,7 +176,6 @@
 
             </div>
             
-            <!-- Bottom CTA -->
             <div class="text-center reveal" style="margin-top: 80px; padding: 60px 40px; background: var(--white); border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); border: 1px solid var(--border-color);">
                 <h2 style="font-size: 2.2rem; margin-bottom: 15px;">Ready to dominate your industry?</h2>
                 <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">Let our experts audit your current marketing infrastructure and build a tailored roadmap for unprecedented growth.</p>
