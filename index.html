@@ -1,101 +1,179 @@
-window.addEventListener('load', function() {
-    // 1. Fast, Clean Preloader
-    const preloader = document.getElementById('preloader');
-    setTimeout(function() {
-        preloader.style.opacity = '0';
-        setTimeout(function() {
-            preloader.style.display = 'none';
-        }, 400); 
-    }, 400); 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+    <title>Schramm AdLabs | Customized Marketing That Works</title>
+    
+    <link rel="icon" href="FAV ICON.webp" type="image/webp">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="preloader"><div class="spinner"></div></div>
 
-    // 2. Active Link Highlighting
-    const currentLocation = location.href;
-    const menuItem = document.querySelectorAll('.nav-links a:not(.btn-primary):not(.btn-quote)');
-    for (let i = 0; i < menuItem.length; i++) {
-        if (menuItem[i].href === currentLocation) {
-            menuItem[i].classList.add("active");
-        }
-    }
+    <header>
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">
+                <img src="Schramm_AdLabs_transparent.webp" alt="Schramm AdLabs Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="header-actions">
+                <a href="contact.html" class="btn-quote desktop-only">Get A Quote</a>
+                <div class="menu-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    // 3. Scroll Reveal Observer
-    function reveal() {
-        const reveals = document.querySelectorAll(".reveal");
-        for (let i = 0; i < reveals.length; i++) {
-            const windowHeight = window.innerHeight;
-            const elementTop = reveals[i].getBoundingClientRect().top;
-            const elementVisible = 80;
+    <section class="hero-banner-custom">
+        <div class="container reveal hero-content-layer">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">
+                        Marketing That Works In The Real World
+                    </div>
+                    <h1>
+                        Customized Marketing <br>That Drives Real <br>
+                        <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        We help businesses to build awareness about their products and services, generate quality leads, build strong brand presence, and expand into new markets—without unnecessary complexity.
+                    </p>
+                    <div class="cta-group">
+                        <a href="#lead-form" class="btn-primary gradient-btn">Get Your Free Marketing Plan</a>
+                        <a href="contact.html" class="btn-outline">Talk to Our Team</a>
+                    </div>
+                </div>
+                
+                <div class="hero-collage">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Business Model" class="main-img float-anim-1">
+                    <div class="stack-col">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Digital Marketing Strategy" class="float-anim-2">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Global Handshake" class="float-anim-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            if (elementTop < windowHeight - elementVisible) {
-                reveals[i].classList.add("active");
-            }
-        }
-    }
-    window.addEventListener("scroll", reveal);
-    reveal(); // Trigger immediately on load to show visible elements
+    <section class="content-section bg-white">
+        <div class="container reveal">
+            <div class="split-grid">
+                <div>
+                    <div class="section-label">
+                        <i class="fa-solid fa-diamond"></i> About Us
+                    </div>
+                    <h2>No Jargons. No Big Presentations. <br>Just Real Results.</h2>
+                    <p class="text-light mb-20">
+                        At Schramm AdLabs, we believe marketing should be simple, practical, and effective. We don't believe in one-size-fits-all strategies. Every business is different, and so is our approach.
+                    </p>
+                    <p class="text-light mb-30">
+                        We work as your <strong>marketing partner</strong>, understanding your business deeply and delivering solutions that actually work in real-world conditions.
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i> Customized marketing plans for your business needs
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i> Cost-effective solutions without cutting corners
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i> Practical strategies aligned with your market reality
+                        </li>
+                    </ul>
+                </div>
+                <div class="image-stack">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Team collaborating">
+                </div>
+            </div>
+        </div>
+    </section>
 
-    // 4. Mobile Menu Toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    
-    if(menuToggle) {
-        menuToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            const icon = menuToggle.querySelector('i');
-            
-            // Switch icon from hamburger to "X"
-            if(navLinks.classList.contains('active')){
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-            } else {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-            }
-        });
-    }
-});
+    <section class="content-section bg-light text-center">
+        <div class="container reveal">
+            <div class="section-label center-label">
+                <i class="fa-solid fa-diamond"></i> What Makes Us Different
+            </div>
+            <h2>More Than Just a Marketing Agency</h2>
+            <p class="text-light max-w-800">
+                We combine marketing, business development, and industry understanding to help you not just promote—but grow.
+            </p>
+        </div>
+    </section>
 
-// 5. Dynamic Typewriter Effect for Hero Section
-document.addEventListener("DOMContentLoaded", function() {
-    const typedTextSpan = document.querySelector(".typed-text");
-    const cursorSpan = document.querySelector(".cursor");
+    <section class="content-section bg-white">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label center-label">
+                    <i class="fa-solid fa-diamond"></i> What We Do
+                </div>
+                <h2>Complete Marketing & Growth Solutions</h2>
+            </div>
+            <div class="grid">
+                <div class="card reveal card-flush">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Build Your Brand" class="card-img">
+                    <div class="card-body text-center">
+                        <h3>Build Your Brand</h3>
+                        <p class="text-light">Logo Design • Website Design & Hosting</p>
+                    </div>
+                </div>
+                <div class="card reveal card-flush" style="transition-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Grow Your Visibility" class="card-img">
+                    <div class="card-body text-center">
+                        <h3>Grow Your Visibility</h3>
+                        <p class="text-light">SEO • Social Media Marketing • Content</p>
+                    </div>
+                </div>
+                <div class="card reveal card-flush" style="transition-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Generate Leads & Sales" class="card-img">
+                    <div class="card-body text-center">
+                        <h3>Generate Leads & Sales</h3>
+                        <p class="text-light">Google Ads • Meta Ads • Campaigns</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <a href="index.html"><img src="Schramm_AdLabs_transparent.webp" alt="Schramm AdLabs Footer Logo"></a>
+                    <p>Relevant. Reliable. Realistic.<br>A Division of KBJ HR INDIA PRIVATE LIMITED.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-phone"></i> +91 8655695279</li>
+                        <li><i class="fa-solid fa-envelope"></i> schrammadlabs@kbjindia.com</li>
+                        <li><i class="fa-solid fa-location-dot"></i> CBD Belapur, Navi Mumbai</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Schramm AdLabs. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
     
-    // Array of words/phrases to loop through
-    const textArray = ["Market Expansion.", "Quality Leads.", "Real Results.", "Business Growth."];
-    
-    const typingDelay = 100;
-    const erasingDelay = 50;
-    const newTextDelay = 2000; // Delay between current and next text
-    let textArrayIndex = 0;
-    let charIndex = 0;
-    
-    function type() {
-        if (charIndex < textArray[textArrayIndex].length) {
-            if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-            typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-            charIndex++;
-            setTimeout(type, typingDelay);
-        } else {
-            cursorSpan.classList.remove("typing");
-            setTimeout(erase, newTextDelay);
-        }
-    }
-    
-    function erase() {
-        if (charIndex > 0) {
-            if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-            typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-            charIndex--;
-            setTimeout(erase, erasingDelay);
-        } else {
-            cursorSpan.classList.remove("typing");
-            textArrayIndex++;
-            if(textArrayIndex >= textArray.length) textArrayIndex = 0;
-            setTimeout(type, typingDelay + 1100);
-        }
-    }
-    
-    // Initiate Typewriter on load if element exists
-    if(textArray.length && typedTextSpan) {
-        setTimeout(type, newTextDelay + 250);
-    }
-});
+    <script src="app.js"></script>
+</body>
+</html>
