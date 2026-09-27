@@ -40,7 +40,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition-smooth);
 .two-line-title { font-size: 2.6rem; line-height: 1.25; margin-bottom: 25px; white-space: normal; }
 .center-title { text-align: center; }
 
-/* NEW: Premium Logo Preloader */
+/* Premium Logo Preloader */
 #preloader {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background: var(--dark-navy); display: flex; justify-content: center; align-items: center;
@@ -79,27 +79,36 @@ a { text-decoration: none; color: inherit; transition: var(--transition-smooth);
 }
 .curved-header .nav-wrapper { display: flex; justify-content: space-between; align-items: center; height: 85px; padding: 0 30px; }
 .logo img { height: 55px; object-fit: contain; }
-.nav-links { display: flex; gap: 25px; align-items: center; }
-.nav-links a { font-weight: 500; font-size: 1.1rem; color: var(--white); position: relative; }
 
-/* Navigation Hover Underline Effect */
-.nav-links a::after {
-    content: ''; position: absolute; width: 0; height: 2px; display: block;
-    margin-top: 5px; right: 0; background: var(--primary-cyan); transition: width 0.3s ease;
+/* NEW: Outlined Pill Navigation Links */
+.nav-links { display: flex; gap: 15px; align-items: center; }
+.nav-links a { 
+    font-weight: 500; 
+    font-size: 1.05rem; 
+    color: var(--white); 
+    padding: 8px 22px; 
+    border: 1px solid rgba(255, 255, 255, 0.25); /* The outline circle/pill */
+    border-radius: 50px; 
+    transition: var(--transition-smooth);
 }
-.nav-links a:hover::after, .nav-links a.active::after { width: 100%; left: 0; background: var(--primary-cyan); }
-.nav-links a:hover, .nav-links a.active { color: var(--primary-cyan); }
+.nav-links a:hover, .nav-links a.active { 
+    color: var(--primary-cyan); 
+    border-color: var(--primary-cyan); 
+    background: rgba(56, 189, 248, 0.08); /* Soft cyan fill on hover */
+}
+
 .header-actions { display: flex; align-items: center; gap: 15px; }
 
 /* Buttons */
 .btn-quote {
-    background: var(--primary-blue); color: var(--white); padding: 12px 28px;
+    background: var(--primary-blue); color: var(--white); padding: 10px 26px;
     border-radius: 50px; font-weight: 600; font-size: 1rem; transition: var(--transition-smooth);
+    border: 1px solid transparent;
 }
 .btn-quote:hover { background: var(--primary-blue-hover); transform: translateY(-2px); }
 .menu-toggle { display: none; font-size: 1.8rem; color: var(--white); cursor: pointer; }
 
-/* NEW: Shine Effect for Primary Buttons */
+/* Shine Effect for Primary Buttons */
 .btn-primary {
     background: var(--primary-blue); color: var(--white);
     padding: 16px 32px; border-radius: 8px; font-weight: 600; font-size: 1.05rem;
@@ -124,9 +133,12 @@ a { text-decoration: none; color: inherit; transition: var(--transition-smooth);
 
 /* Hero Section */
 .hero-banner-custom {
-    position: relative; padding: 190px 0 120px 0;
+    position: relative; 
+    /* UPDATED: Increased top padding from 190px to 240px to create the gap below the header */
+    padding: 240px 0 120px 0; 
     background: linear-gradient(to right, rgba(10, 25, 47, 0.98) 0%, rgba(10, 25, 47, 0.85) 45%, rgba(10, 25, 47, 0.3) 100%), url('hero-marketing.webp') center/cover no-repeat;
-    overflow: hidden; margin-top: -100px;
+    overflow: hidden; 
+    margin-top: -100px;
 }
 .hero-content-layer { position: relative; z-index: 2; }
 .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: center; }
@@ -234,7 +246,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition-smooth);
 .footer-logo p { color: #cbd5e1; font-size: 0.95rem; }
 .footer-links h4 { font-size: 1.1rem; margin-bottom: 20px; color: var(--white); }
 .footer-links ul li { margin-bottom: 12px; color: #94a3b8; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;}
-.footer-links ul li a:hover { color: var(--primary-cyan); padding-left: 5px; } /* Small slide effect */
+.footer-links ul li a:hover { color: var(--primary-cyan); padding-left: 5px; }
 .footer-links i { color: var(--primary-cyan); }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 25px; text-align: center; color: #64748b; font-size: 0.9rem; }
 
@@ -252,6 +264,13 @@ a { text-decoration: none; color: inherit; transition: var(--transition-smooth);
     .two-line-title { font-size: 2.2rem; }
     .split-grid { gap: 40px; }
     .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    
+    /* Adjusted Hero Padding for Tablet */
+    .hero-banner-custom {
+        background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.95)), url('hero-marketing.webp') center/cover no-repeat;
+        padding: 200px 0 80px 0; 
+    }
+    
     .features-grid { grid-template-columns: repeat(2, 1fr); }
     .order-mobile-2 { order: 2; }
 }
@@ -273,11 +292,20 @@ a { text-decoration: none; color: inherit; transition: var(--transition-smooth);
         background: rgba(10, 25, 47, 0.98); flex-direction: column; justify-content: center; align-items: center;
         transition: var(--transition-smooth); padding: 30px 20px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);
         opacity: 0; pointer-events: none; transform: translateY(-10px);
+        gap: 15px; /* Clean gap for mobile stack */
     }
+    
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+    }
+    
     .nav-links.active { opacity: 1; pointer-events: all; transform: translateY(0); }
     .menu-toggle { display: block; }
 
-    .hero-banner-custom { padding: 150px 0 60px 0; }
+    /* Adjusted Hero Padding for Mobile to keep the gap */
+    .hero-banner-custom { padding: 180px 0 60px 0; margin-top: -80px; }
+    
     .cta-group { flex-direction: column; width: 100%; }
     .cta-group a { width: 100%; text-align: center; }
     
