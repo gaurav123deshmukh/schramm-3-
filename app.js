@@ -1,12 +1,10 @@
 window.addEventListener('load', function() {
-    // 1. Fast, Clean Preloader
+    // 1. Premium Preloader Delay (Waits for loading bar animation)
     const preloader = document.getElementById('preloader');
     setTimeout(function() {
         preloader.style.opacity = '0';
-        setTimeout(function() {
-            preloader.style.display = 'none';
-        }, 400); 
-    }, 400); 
+        preloader.style.visibility = 'hidden';
+    }, 1200); // 1.2s matches CSS animation length
 
     // 2. Active Link Highlighting
     const currentLocation = location.href;
@@ -17,7 +15,7 @@ window.addEventListener('load', function() {
         }
     }
 
-    // 3. Scroll Reveal Observer
+    // 3. Scroll Reveal Observer with Stagger
     function reveal() {
         const reveals = document.querySelectorAll(".reveal");
         for (let i = 0; i < reveals.length; i++) {
@@ -31,7 +29,8 @@ window.addEventListener('load', function() {
         }
     }
     window.addEventListener("scroll", reveal);
-    reveal();
+    // Slight delay on initial reveal for smoother load sync with preloader
+    setTimeout(reveal, 1300); 
 
     // 4. Mobile Menu Toggle
     const menuToggle = document.querySelector('.menu-toggle');
@@ -58,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const typedTextSpan = document.querySelector(".typed-text");
     const cursorSpan = document.querySelector(".cursor");
     
-    // Array of words/phrases to loop through
     const textArray = ["Market Expansion.", "Quality Leads.", "Real Results.", "Business Growth."];
     
     const typingDelay = 100;
@@ -93,7 +91,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     
+    // Start after preloader finishes
     if(textArray.length && typedTextSpan) {
-        setTimeout(type, newTextDelay + 250);
+        setTimeout(type, newTextDelay + 1200);
     }
 });
