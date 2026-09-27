@@ -11,47 +11,25 @@
     <link rel="stylesheet" href="style.css">
     
     <style>
-        /* Transparent Navy Header & Larger Text/Logo overrides */
         header {
             background: rgba(10, 25, 47, 0.85) !important;
             backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        .nav-wrapper {
-            height: 100px !important;
-        }
+        .nav-wrapper { height: 100px !important; }
+        .logo img { height: 70px !important; }
+        .nav-links a { font-size: 1.15rem !important; color: #ffffff !important; }
+        .nav-links a:hover, .nav-links a.active { color: #38bdf8 !important; }
+        .menu-toggle { color: #ffffff !important; }
+        .btn-quote { font-size: 1.05rem !important; padding: 12px 28px !important; }
 
-        .logo img {
-            height: 70px !important;
-        }
-
-        .nav-links a {
-            font-size: 1.15rem !important;
-            color: #ffffff !important;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: #38bdf8 !important;
-        }
-
-        .menu-toggle {
-            color: #ffffff !important;
-        }
-
-        .btn-quote {
-            font-size: 1.05rem !important;
-            padding: 12px 28px !important;
-        }
-
-        /* Transparent Navy Footer */
         footer {
             background: rgba(10, 25, 47, 0.9) !important;
             backdrop-filter: blur(10px);
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        /* Hero Banner */
         .hero-banner-custom {
             position: relative;
             padding: 180px 0 120px 0;
@@ -100,10 +78,7 @@
         }
 
         @media (max-width: 992px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
+            .hero-grid { grid-template-columns: 1fr; gap: 40px; }
             .hero-banner-custom {
                 background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.95)), url('hero-marketing.webp') center/cover no-repeat !important;
                 padding: 160px 0 80px 0;
@@ -142,7 +117,8 @@
                         Marketing That Works In The Real World
                     </div>
                     <h1 style="font-size: 3.8rem; line-height: 1.15; color: var(--white); margin-bottom: 20px;">
-                        Customized Marketing <br>That Drives Real <br><span style="color: #38bdf8;">Market Expansion.</span>
+                        Customized Marketing <br>That Drives Real <br>
+                        <span class="typed-text" style="color: #38bdf8;"></span><span class="cursor">&nbsp;</span>
                     </h1>
                     <p style="font-size: 1.1rem; color: #94a3b8; max-width: 600px; margin-bottom: 40px; line-height: 1.7;">
                         We help businesses to build awareness about their products and services, generate quality leads, build strong brand presence, and expand into new markets—without unnecessary complexity.
@@ -154,16 +130,17 @@
                 </div>
                 
                 <div class="hero-collage">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Business Model" class="main-img">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Business Model" class="main-img float-anim-1">
                     <div class="stack-col">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Digital Marketing Strategy">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Global Handshake">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Digital Marketing Strategy" class="float-anim-2">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Global Handshake" class="float-anim-3">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Content Sections ... -->
     <section class="content-section" style="background-color: var(--white);">
         <div class="container reveal">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
@@ -273,6 +250,7 @@
             </div>
         </div>
     </footer>
+    
     <script src="app.js"></script>
 </body>
 </html>
