@@ -3,12 +3,54 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
-    <title>Services | Schramm AdLabs</title>
+    <title>Our Services | Schramm AdLabs</title>
     
     <link rel="icon" href="FAV ICON.webp" type="image/webp">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific Styles for Detailed Service Cards */
+        .service-card-body {
+            padding: 35px 30px;
+            text-align: left;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: auto; /* Pushes tags to the bottom evenly */
+            padding-top: 20px;
+        }
+        .service-tags span {
+            background: rgba(0, 102, 204, 0.06);
+            color: var(--primary-blue);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid rgba(0, 102, 204, 0.15);
+            transition: var(--transition-smooth);
+        }
+        .card:hover .service-tags span {
+            background: var(--primary-blue);
+            color: var(--white);
+            border-color: var(--primary-blue);
+        }
+        .service-card-title {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: var(--dark-navy);
+        }
+        .service-card-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
     <!-- PREMIUM PRELOADER -->
@@ -42,75 +84,143 @@
         </div>
     </header>
 
-    <section class="page-header" style="padding: 180px 0 80px 0; margin-top: -100px; position: relative; z-index: 2;">
-        <div class="container reveal">
-            <h1>Our Expertise</h1>
-            <p>Comprehensive marketing and growth solutions tailored for your enterprise.</p>
+    <!-- PAGE HEADER -->
+    <section class="page-header" style="padding: 200px 0 100px 0; margin-top: -100px; position: relative; z-index: 2; background: linear-gradient(to right, rgba(10, 25, 47, 0.95), rgba(10, 25, 47, 0.85)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="container reveal text-center">
+            <div style="display: inline-flex; align-items: center; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.3); padding: 8px 18px; border-radius: 50px; color: var(--primary-cyan); font-weight: 600; font-size: 0.75rem; margin-bottom: 20px; letter-spacing: 1.5px; text-transform: uppercase;">
+                Growth Engine
+            </div>
+            <h1 style="font-size: 3.5rem; color: var(--white); margin-bottom: 15px;">Our Expertise</h1>
+            <p style="color: #94a3b8; font-size: 1.15rem; max-width: 600px; margin: 0 auto;">Comprehensive digital and offline marketing architectures engineered for absolute market dominance.</p>
         </div>
     </section>
 
+    <!-- DETAILED SERVICES GRID -->
     <section class="content-section bg-light">
         <div class="container">
-            <div class="grid">
-                <!-- Card 1 -->
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));">
+                
+                <!-- 1. SEO -->
                 <div class="card reveal card-flush">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Build Your Brand" class="card-img">
+                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Advanced SEO" class="card-img">
                     </div>
-                    <div class="card-body text-center">
-                        <div style="width: 30px; height: 3px; background: var(--primary-blue); margin: 0 auto 15px auto;"></div>
-                        <h3>Build Your Brand</h3>
-                        <p class="text-light" style="font-size: 0.95rem;">Logo Design • Website Design & Hosting • Packaging • Brochures & Corporate Materials</p>
+                    <div class="service-card-body">
+                        <div style="width: 40px; height: 4px; background: var(--primary-blue); margin-bottom: 20px; border-radius: 2px;"></div>
+                        <h3 class="service-card-title">Search Engine Optimization</h3>
+                        <p class="service-card-desc">Dominate search algorithms and AI generative engines with our comprehensive organic growth strategies. We ensure your business is highly visible exactly where your customers are looking.</p>
+                        <div class="service-tags">
+                            <span>On-Page SEO</span>
+                            <span>Off-Page SEO</span>
+                            <span>Local SEO</span>
+                            <span>AEO (Answer Engine)</span>
+                            <span>GEO (Generative Engine)</span>
+                            <span>High-DA Backlinks</span>
+                        </div>
                     </div>
                 </div>
-                <!-- Card 2 -->
+
+                <!-- 2. Google Ads / Performance Marketing -->
                 <div class="card reveal card-flush" style="transition-delay: 0.1s;">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Grow Your Visibility" class="card-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Performance Marketing" class="card-img">
                     </div>
-                    <div class="card-body text-center">
-                        <div style="width: 30px; height: 3px; background: var(--primary-blue); margin: 0 auto 15px auto;"></div>
-                        <h3>Grow Your Visibility</h3>
-                        <p class="text-light" style="font-size: 0.95rem;">SEO • Social Media Marketing • Content Creation • Blogs & Videos</p>
+                    <div class="service-card-body">
+                        <div style="width: 40px; height: 4px; background: var(--primary-blue); margin-bottom: 20px; border-radius: 2px;"></div>
+                        <h3 class="service-card-title">Performance & Lead Gen</h3>
+                        <p class="service-card-desc">Drive immediate, high-quality traffic and maximize your ROI with precision-targeted ad campaigns designed to convert clicks into loyal customers.</p>
+                        <div class="service-tags">
+                            <span>Google Ads (PPC)</span>
+                            <span>Meta Ads (FB/Insta)</span>
+                            <span>Performance Max</span>
+                            <span>Retargeting</span>
+                            <span>Lead Funnels</span>
+                        </div>
                     </div>
                 </div>
-                <!-- Card 3 -->
+
+                <!-- 3. Web Development -->
                 <div class="card reveal card-flush" style="transition-delay: 0.2s;">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Generate Leads & Sales" class="card-img">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Website Development" class="card-img">
                     </div>
-                    <div class="card-body text-center">
-                        <div style="width: 30px; height: 3px; background: var(--primary-blue); margin: 0 auto 15px auto;"></div>
-                        <h3>Generate Leads & Sales</h3>
-                        <p class="text-light" style="font-size: 0.95rem;">Google Ads • Meta Ads • Campaign Strategy • Performance Marketing</p>
+                    <div class="service-card-body">
+                        <div style="width: 40px; height: 4px; background: var(--primary-blue); margin-bottom: 20px; border-radius: 2px;"></div>
+                        <h3 class="service-card-title">Website Development</h3>
+                        <p class="service-card-desc">Architecting lightning-fast, secure, and highly responsive digital experiences. Your website isn't just a brochure; it's your 24/7 sales representative.</p>
+                        <div class="service-tags">
+                            <span>Custom Web Dev</span>
+                            <span>UI / UX Design</span>
+                            <span>E-Commerce Sites</span>
+                            <span>Landing Pages</span>
+                            <span>Premium Hosting</span>
+                        </div>
                     </div>
                 </div>
-                <!-- Card 4 -->
+
+                <!-- 4. Graphic Design -->
                 <div class="card reveal card-flush" style="transition-delay: 0.3s;">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Graphic Design" class="card-img">
+                    </div>
+                    <div class="service-card-body">
+                        <div style="width: 40px; height: 4px; background: var(--primary-blue); margin-bottom: 20px; border-radius: 2px;"></div>
+                        <h3 class="service-card-title">Graphic Design & Branding</h3>
+                        <p class="service-card-desc">Crafting compelling visual identities that resonate with your target audience and distinctly separate your brand from the competition.</p>
+                        <div class="service-tags">
+                            <span>Logo Creation</span>
+                            <span>Packaging Design</span>
+                            <span>Corporate Brochures</span>
+                            <span>Social Creatives</span>
+                            <span>Brand Identity</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Offline & Creative Marketing (Hoardings) -->
+                <div class="card reveal card-flush" style="transition-delay: 0.4s;">
                     <div class="card-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Offline & Creative Marketing" class="card-img">
                     </div>
-                    <div class="card-body text-center">
-                        <div style="width: 30px; height: 3px; background: var(--primary-blue); margin: 0 auto 15px auto;"></div>
-                        <h3>Offline & Creative Marketing</h3>
-                        <p class="text-light" style="font-size: 0.95rem;">Posters • Hoardings • Leaflets • Local Campaigns • Sponsorships & Events</p>
+                    <div class="service-card-body">
+                        <div style="width: 40px; height: 4px; background: var(--primary-blue); margin-bottom: 20px; border-radius: 2px;"></div>
+                        <h3 class="service-card-title">Offline & Local Marketing</h3>
+                        <p class="service-card-desc">Command physical presence with high-impact offline marketing solutions that capture attention in the real world and drive localized brand awareness.</p>
+                        <div class="service-tags">
+                            <span>Hoardings / Holdings</span>
+                            <span>Billboards</span>
+                            <span>Posters & Leaflets</span>
+                            <span>Event Sponsorships</span>
+                            <span>Local Area Campaigns</span>
+                        </div>
                     </div>
                 </div>
-                <!-- Card 5 -->
-                <div class="card reveal card-flush" style="transition-delay: 0.4s;">
+
+                <!-- 6. Market Expansion -->
+                <div class="card reveal card-flush" style="transition-delay: 0.5s;">
                     <div class="card-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Expand Your Market" class="card-img">
                     </div>
-                    <div class="card-body text-center">
-                        <div style="width: 30px; height: 3px; background: var(--primary-blue); margin: 0 auto 15px auto;"></div>
-                        <h3>Expand Your Market</h3>
-                        <p class="text-light" style="font-size: 0.95rem;">Business Development • Market Entry • Brand Positioning • International Marketing</p>
+                    <div class="service-card-body">
+                        <div style="width: 40px; height: 4px; background: var(--primary-blue); margin-bottom: 20px; border-radius: 2px;"></div>
+                        <h3 class="service-card-title">Market Expansion</h3>
+                        <p class="service-card-desc">Scale beyond your current borders. We utilize our deep industry insights to formulate and execute strategies that introduce your brand to new demographics.</p>
+                        <div class="service-tags">
+                            <span>Business Development</span>
+                            <span>Market Entry Strategy</span>
+                            <span>Brand Positioning</span>
+                            <span>International Marketing</span>
+                        </div>
                     </div>
                 </div>
+
             </div>
             
-            <div class="text-center reveal" style="margin-top: 60px;">
-                <a href="contact.html" class="btn-primary" style="padding: 16px 40px; font-size: 1.1rem;">Discuss Your Project</a>
+            <!-- Bottom CTA -->
+            <div class="text-center reveal" style="margin-top: 80px; padding: 60px 40px; background: var(--white); border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); border: 1px solid var(--border-color);">
+                <h2 style="font-size: 2.2rem; margin-bottom: 15px;">Ready to dominate your industry?</h2>
+                <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">Let our experts audit your current marketing infrastructure and build a tailored roadmap for unprecedented growth.</p>
+                <a href="contact.html" class="btn-primary" style="padding: 16px 40px; font-size: 1.1rem;">Request a Strategy Audit</a>
             </div>
         </div>
     </section>
