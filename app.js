@@ -31,7 +31,7 @@ window.addEventListener('load', function() {
         }
     }
     window.addEventListener("scroll", reveal);
-    reveal(); // Trigger immediately on load to show visible elements
+    reveal();
 
     // 4. Mobile Menu Toggle
     const menuToggle = document.querySelector('.menu-toggle');
@@ -42,7 +42,6 @@ window.addEventListener('load', function() {
             navLinks.classList.toggle('active');
             const icon = menuToggle.querySelector('i');
             
-            // Switch icon from hamburger to "X"
             if(navLinks.classList.contains('active')){
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-xmark');
@@ -64,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     const typingDelay = 100;
     const erasingDelay = 50;
-    const newTextDelay = 2000; // Delay between current and next text
+    const newTextDelay = 2000; 
     let textArrayIndex = 0;
     let charIndex = 0;
     
@@ -94,7 +93,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     
-    // Initiate Typewriter on load if element exists
     if(textArray.length && typedTextSpan) {
         setTimeout(type, newTextDelay + 250);
     }
