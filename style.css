@@ -1,6 +1,3 @@
-Here is the complete, updated **`style.css`** file containing all the mobile responsiveness, layout configurations, animations, and the new typography updates. You can copy and paste this directly into your file.
-
-```css
 /* ==========================================
    Schramm AdLabs - Enterprise Design System
    ========================================== */
@@ -37,19 +34,21 @@ a { text-decoration: none; color: inherit; transition: var(--transition-smooth);
 .mb-30 { margin-bottom: 30px; }
 .max-w-800 { max-width: 800px; margin: 0 auto; font-size: 1.15rem; }
 
-/* Typography */
+/* Title formatting */
 .single-line-title {
     font-size: 2.2rem;
     line-height: 1.2;
     margin-bottom: 25px;
     white-space: nowrap; 
 }
+
 .two-line-title {
     font-size: 2.6rem;
     line-height: 1.25;
     margin-bottom: 25px;
     white-space: normal; 
 }
+
 .center-title {
     text-align: center;
 }
@@ -178,7 +177,7 @@ header {
 .feature-list li { display: flex; align-items: flex-start; gap: 10px; font-weight: 500; color: var(--text-dark); }
 .feature-list i { color: var(--primary-blue); margin-top: 4px; font-size: 1.1rem; }
 
-/* Wide Feature List for Partner Section */
+/* NEW: Wide Feature List for Partner Section */
 .wide-feature-list { display: flex; flex-direction: column; gap: 15px; }
 .wide-feature-item {
     display: flex; align-items: center; gap: 15px; background: var(--white);
@@ -226,15 +225,19 @@ footer {
    ========================================== */
 
 @media (max-width: 1024px) {
-    .single-line-title { font-size: 1.8rem; }
+    .single-line-title {
+        font-size: 1.8rem;
+    }
 }
 
 @media (max-width: 992px) {
     .single-line-title {
-        white-space: normal; /* Allow wrap on tablets/mobile to avoid overflow */
+        white-space: normal; 
         font-size: 2.2rem;
     }
-    .two-line-title { font-size: 2.2rem; }
+    .two-line-title {
+        font-size: 2.2rem;
+    }
     .split-grid { gap: 40px; }
     .hero-grid { grid-template-columns: 1fr; gap: 40px; }
     .hero-banner-custom {
@@ -297,5 +300,3 @@ footer {
         letter-spacing: 0px;
     }
 }
-
-```
